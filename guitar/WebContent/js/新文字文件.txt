@@ -1,0 +1,70 @@
+var currentNode;
+
+var id=0;
+
+
+
+
+function start()
+{
+	
+	
+	
+	
+	document.getElementById("addButton").addEventListener("click",addPost,false);
+	
+	
+	
+	currentNode=document.getElementById("tbody");
+	
+	
+	
+}
+
+
+function addPost()
+{
+	
+	var name=document.getElementById("filename").value;
+	var desc=document.getElementById("description").value;
+	
+	
+	console.log(name);
+	console.log(desc);
+	
+	
+	var newtext=createNewNode1(name,desc);
+		
+	
+	currentNode.appendChild(newtext);
+}
+
+
+
+
+function createNewNode1(name,desc)
+{
+	
+	var newNode1=document.createElement("tr");
+	var newNode2=document.createElement("td");
+	var newNode3=document.createElement("a");
+	
+	
+	newNode1.setAttribute("class","headerrow1")
+	
+	newNode3.setAttribute("href","#");
+	text="曲名 :" + name +" / 敘述:"+desc;
+	
+	var node = document.createTextNode(text);
+	newNode3.appendChild(node);
+	
+	
+	
+	newNode1.appendChild(newNode2);
+	newNode2.appendChild(newNode3);
+
+	
+	
+	return(newNode1)
+}
+window.addEventListener("load",start,false)

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>guitar</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>ScanShare</servlet-name>
+    <servlet-class>com.example.ScanShare</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScanShare</servlet-name>
+    <url-pattern>/ScanShare.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>download</servlet-name>
+    <servlet-class>com.example.downloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>download</servlet-name>
+    <url-pattern>/download.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>downloadShare</servlet-name>
+    <servlet-class>com.example.downloadShareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>downloadShare</servlet-name>
+    <url-pattern>/downloadShare.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>upload</servlet-name>
+    <servlet-class>com.example.uploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>upload</servlet-name>
+    <url-pattern>/upload.do</url-pattern>
+  </servlet-mapping>
+</web-app>
